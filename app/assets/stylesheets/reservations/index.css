@@ -5,8 +5,8 @@
   position: relative;
 }
 .section{
-  width: 980px;
-  height: 57px;
+  min-width: 980px;
+  min-height: 57px;
   margin: 0 15px;
   padding: 15px 0 0;
   position: absolute;

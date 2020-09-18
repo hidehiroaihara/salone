@@ -5,7 +5,7 @@
 }
 .header .header-section{
   margin: 0 auto;
-  width: 980px;
+  min-width: 100%;
   display: flex;
 }
 .header-section{
@@ -13,17 +13,19 @@
   padding: 15px 0 0;
 }
 .salone-icon{
-  width: 20vw;
-  height: 20vh;
-  margin-right: 5vw;
-  margin-left: 10px;
+  width: 200px;
+  height: 80px;
+  margin: 0 10px 0 15px;
 } 
+.logo{
+  width: 300px;
+  height: 80px;
+}
 .btn_area{
   min-width: 100%;
 }
 .shop_name_wrap{
   display: flex;
-  justify-content: flex-end;
   min-width: 100%;
   min-height: 10vh;
 }
@@ -61,11 +63,11 @@
   background-color: lightgray;
 }
 .section-bottom{
-  width: 980px;
+  min-width: 980px;
   margin: 0 15px;
   padding: 5px 0;
 }
-.btn-colimn{
+.btn-column{
   min-width: 980px;
   min-height: 29px;
 }
