@@ -1,7 +1,8 @@
 .top-page-header{
-  min-width: 980px;
+  min-width: 1529px;
   min-height: 65px;
   background: #99ccff;
+  background-size: cover;
 }
 .header .header-section{
   margin: 0 auto;
@@ -11,6 +12,7 @@
 .header-section{
   margin: 0 15px;
   padding: 15px 0 0;
+  width: 100%;
 }
 .salone-icon{
   width: 200px;
@@ -22,14 +24,14 @@
   height: 80px;
 }
 .btn_area{
-  min-width: 100%;
+  width: 100%;
 }
 .shop_name_wrap{
   display: flex;
-  min-width: 100%;
-  min-height: 10vh;
+  width: 100%;
 }
 .shop_area{
+  height: 30px;
   border: 1px solid white;
   background-color: white;
   color: plum;
@@ -41,7 +43,7 @@
 .btn-all{
   display: flex;
   height: calc(100% - 10vh);
-  min-width: 100%;
+  width: 100%;
 }
 .management{
  font-size: 18px;
@@ -58,21 +60,22 @@
   color: white;
 }
 .btn-bottom{
-  min-width: 980px;
+  min-width: 1529px;
   min-height: 39px;
   background-color: lightgray;
 }
 .section-bottom{
-  min-width: 980px;
-  margin: 0 15px;
+  width: 1514px;
+  margin-left: 15px;
   padding: 5px 0;
 }
 .btn-column{
-  min-width: 980px;
-  min-height: 29px;
+  width: 100%;
+  height: 29px;
 }
 .column-all{
   display: flex;
+  width: 100%;
 }
 .schedule{
   border: 1px solid skyblue;
@@ -91,6 +94,7 @@
 a{
   text-decoration: none;
   list-style: none;
+  color: white;
 }
 
 
