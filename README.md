@@ -27,15 +27,21 @@ Things you may want to cover:
 
 ## users テーブル
 
-|  Column         | Type   | Options      |
-| ----------------| ------ | ------------ |
-| first_name      | string | null: false  |
-| last_name       | string | null: false  |
-| first_name_cana | string | null: false  |
-| last_name_cana  | string | null: false  |
-| birthday        | date   | null: false  |
-| phone_number    | string | null: false  |
-| gender_id       | integer| null: false  |
+|  Column         | Type   | Options                              |
+| ----------------| ------ | ------------------------------------ |
+| first_name      | string | null: false                          |
+| last_name       | string | null: false                          |
+| first_name_cana | string | null: false                          |
+| last_name_cana  | string | null: false                          |
+| birthday        | date   | null: false                          |
+| phone_number    | string | null: false                          |
+| gender_id       | integer| null: false                          |
+| stylist_id      | integer| null: false, foreign_key: true       |
+| email           | string | null: false                          |
+| blood_type_id   | integer| null: false                          |
+| job_id          | integer| null: false                          |
+| customer_text   | text   | null: false                          |
+| member_id       | integer| null: false                          |
 
 
 ### Association
@@ -47,6 +53,32 @@ Things you may want to cover:
 - has_many :menus, through: :user_menus
 - has_one  :address 
 - has_many :reservations
+- belongs_to :stylist, optional: true
+- has_one :information
+- has_one :messages
+
+## informations テーブル
+
+|  Column         | Type   | Options                              |
+| ----------------| ------ | ------------------------------------ |
+| information_date| date   |                                      |
+| information_text| text   |                                      |
+| user_id         | integer| null: false, foreign_key: true       |
+
+### Association
+
+- belongs_to :user
+
+## messages テーブル
+
+|  Column         | Type   | Options                              |
+| ----------------| ------ | ------------------------------------ |
+| consent         | boolean|                                      |
+| information_text| text   | null: false                          |
+
+### Association
+
+- belongs_to :user
 
 ## gender テーブル
 
@@ -113,6 +145,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :reservations
+- has_many :users
 
 ##  reservationsテーブル
 

@@ -119,16 +119,19 @@ table{
   width: 100%;
   display: flex;
 }
-.btn_calendar_01{
-  width: 20px;
-  height: 20px;
-}
+.btn_calendar_01, .btn_calendar_02, .btn_calendar_03, .btn_calendar_04 {
+  width: 40px;
+  height: 40px;
+  padding-bottom: 10px;
+} 
 .block{
   margin-left: 10px;
-  border: 1px solid black;
-  background-color: blue;
   font-size: 16px;
   padding: 5px;
+}
+.date{
+  padding-top: 10px;
+  padding-left: 5px;
 }
 .day{
   width: 90px;
