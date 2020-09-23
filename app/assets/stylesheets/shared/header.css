@@ -1,5 +1,5 @@
 .top-page-header{
-  min-width: 1529px;
+  min-width: 980px;
   min-height: 65px;
   background: #99ccff;
   background-size: cover;
@@ -60,12 +60,12 @@
   color: white;
 }
 .btn-bottom{
-  min-width: 1529px;
+  min-width: 980px;
   min-height: 39px;
   background-color: lightgray;
 }
 .section-bottom{
-  width: 1514px;
+  width: 965px;
   margin-left: 15px;
   padding: 5px 0;
 }

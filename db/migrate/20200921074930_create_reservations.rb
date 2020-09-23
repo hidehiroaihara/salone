@@ -7,6 +7,7 @@ class CreateReservations < ActiveRecord::Migration[6.0]
       t.date :date, null: false
       t.integer :menu_id, null: false, foreign_key: true
       t.integer :user_id, null: false, foreign_key: true
+      t.integer :status_id, null: false
       t.timestamps
     end
   end

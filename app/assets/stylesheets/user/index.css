@@ -1,0 +1,24 @@
+.customer_title{
+
+}
+.title1{
+  font-size: 20px;
+}
+.customer_link{
+  display: flex;
+  justify-content: flex-end;
+}
+.btn_new{
+  border: 1px double skyblue;
+  background-color:skyblue;
+}
+.btn_01{
+  font-size: 18px;
+  color:white;
+  font-family: 'hiragino sans';
+}
+.search_customer{
+  height: 100%;
+  width: 100%;
+  background-color: slategray;
+}

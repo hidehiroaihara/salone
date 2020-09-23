@@ -1,8 +1,9 @@
 .page-footer{
   background-color: lightskyblue;
+  min-width: 980px;
 }
 .path{
-  min-width: 1529px;
+  width: 100%;
   background-color: darkgray;
 }
 .path-section{
@@ -10,7 +11,6 @@
   font-size:8px;
 }
 .link_area{
-  width: 100%;
   height: 29px;
   border-bottom: 1px solid white;
 }
@@ -37,7 +37,6 @@
   border-color: transparent transparent transparent #8b6b4e;
 }
 .address{
-  width: 100%;
   height: 50px;
 }
 .salone-icon1{
