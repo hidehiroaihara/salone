@@ -137,15 +137,37 @@ Things you may want to cover:
 
 ## stylists テーブル
 
-|  Column             | Type         | Options                       |
-| ------------------- | ------------ | ----------------------------- |
-| stylist_name        | string       | null: false, foreign_key: true|
-
+|  Column                | Type         | Options                       |
+| ---------------------- | ------------ | ----------------------------- |
+| stylist_first_name     | string       | null: false                   |
+| stylist_lsat_name      | string       | null: false                   |
+| stylist_first_name_cana| string       | null: false                   |
+| stylist_last_name_can  | string       | null: false                   |
+| rank                   | integer      | null: false                   |
+| gender_id              | integer      | null: false                   |
+| catchphrase            | string       | null: false                   |
+| self-introduction      | string       | null: false                   |
 
 ### Association
 
 - has_many :reservations
 - has_many :users
+- has-one :stylists_detail
+
+## stylists_details テーブル
+
+|  Column                | Type         | Options                       |
+| ---------------------- | ------------ | ----------------------------- |
+| rank_text              | string       | null: false                   |
+| stylist_history        | integer      | null: false                   |
+| nomination             | integer      | null: false                   |
+| nomination_price       | integer      | null: false                   |
+| style_type             | integer      | null: false                   |
+| style_technique        | text         | null: false                   |
+| hobby                  | text         | null: false                   |
+
+### Association
+- belongs_to :stylist
 
 ##  reservationsテーブル
 
