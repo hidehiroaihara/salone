@@ -15,6 +15,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.text :customer_text,       null: false
       t.integer :member_id,        null: false
       t.integer :customer_number,  null: false
+      t.integer :age_id,           null: false
       t.timestamps
     end
   end

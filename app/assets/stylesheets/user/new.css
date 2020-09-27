@@ -1,0 +1,79 @@
+.entry{
+  width: 100%;
+  display: flex;
+}
+.entry_table{
+  height: 50px;
+  width: 50%;
+  border: 1px solid black;
+}
+.entry_table1{
+  height: 20px;
+  width: 50%;
+  border: 1px solid black;
+}
+.birth_table{
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+.new_field{
+  width: 120px;
+  float: left;
+  margin-left: 20px;
+}
+.input_name{
+  width: 130px;
+  background-color: rgb(236, 211, 177);
+  padding-left: 10px;
+  border: 1px solid black;
+}
+.select-birth{
+  height: 10px;
+  width: 20px;
+}
+.phone_field, .customer_field{
+  width: 200px;
+  float: left;
+  margin-left: 20px;
+}
+.email_field{
+  width: 300px;
+  float: left;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.post{
+  float: left;
+}
+.select-birth{
+  float: left;
+  margin-left: 20px;
+  width: 30px;
+  font-size: 10px;
+}
+.select-box{
+  float: left;
+  margin-left: 20px;
+  font-size: 16px;
+}
+.post_field{
+
+}
+.address_feild{
+  float: left;
+  margin-left: 20px;
+  width: 300px;
+}
+.bd{
+  border-bottom: 1px solid black
+}
+.select-box1{
+  width: 80px;
+  float: left;
+  margin-left: 20px;
+}
+.birthday_name{
+  font-size: 10px;
+}

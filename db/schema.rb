@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_22_063821) do
+ActiveRecord::Schema.define(version: 2020_09_24_051304) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "post_code", null: false
     t.integer "prefecture_id", null: false
-    t.string "city", null: false
-    t.string "house_number", null: false
-    t.string "building"
+    t.string "address_all", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -51,6 +49,32 @@ ActiveRecord::Schema.define(version: 2020_09_22_063821) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "stylist_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "rank_text", null: false
+    t.integer "stylist_history_id", null: false
+    t.integer "nomination", null: false
+    t.integer "nomination_price", null: false
+    t.integer "style_type_id", null: false
+    t.text "style_technique", null: false
+    t.text "hobby", null: false
+    t.integer "stylist_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "stylists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "stylist_first_name", null: false
+    t.string "stylist_last_name", null: false
+    t.string "stylist_first_name_cana", null: false
+    t.string "stylist_last_name_cana", null: false
+    t.integer "rank_id", null: false
+    t.integer "gender_id", null: false
+    t.string "catchphrase", null: false
+    t.string "self_introduction", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
@@ -66,6 +90,7 @@ ActiveRecord::Schema.define(version: 2020_09_22_063821) do
     t.text "customer_text", null: false
     t.integer "member_id", null: false
     t.integer "customer_number", null: false
+    t.integer "age_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

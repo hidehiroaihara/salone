@@ -1,0 +1,124 @@
+<%= render "shared/header" %>
+<div class="contents">
+　<div class="section">
+    <div class="customer_title">
+      <h1 class="title1">お客様情報登録</h1>
+    </div>
+    <div class="entry">
+      <div class="basic">
+
+      <%= form_with model: @user, url: users_path, local: true do |f| %>
+        <table class="entry_table" align="left">
+          <tr>
+            <th class="input_name">氏名(漢字)</th>
+            <td class="bd">
+              <%= f.text_field :first_name , class:"new_field", maxlength:"25" %>
+            </td>
+            <td class="bd">
+              <%= f.text_field :last_name , class:"new_field", maxlength:"25" %>
+            </td>
+          </tr>
+          <tr>
+            <th class="input_name">氏名(カナ)</th>
+            <td class="bd">
+              <%= f.text_field :first_name_cana, class:"new_field", maxlength:"25" %>
+            </td>
+            <td class="bd">
+              <%= f.text_field :last_name_cana, class:"new_field", maxlength:"25" %>
+            </td>
+          </tr>
+          <tr>
+            <th class="input_name">電話番号</th>
+            <td colspan="2" class="bd"> 
+              <%= f.text_field :phone_number, class:"phone_field", maxlength:"15" %>
+            </td>
+          </tr>
+          <tr>
+            <th class="input_name">EMAIL</th>
+            <td colspan="2" class="bd">
+              <%= f.text_field :email, class:"email_field" %>
+            </td>
+          </tr>
+          <tr>
+            <th class="input_name">お客様番号</th>
+            <td colspan="2" class="bd">
+              <%= f.text_field :customer_number, class:"customer_field"%>
+            </td>
+          </tr>
+          <tr class="address_table" width="100%">
+            <th class="input_name">住所</th>
+            <td colspan="2" class="address_input bd" width="100%">
+              <p class="post">〒
+                <%= f.text_field :post_code, class:"post_feild", placeholder:"例）123-4567", onKeyUp:"AjaxZip3.zip2addr('user_address[post_code]','','user_address[prefecture_id]','user_address[address_all]');" %>
+              </p>
+              <p>
+                <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+              </p>
+              <p>
+                <%= f.text_field :address_all, class:"address_feild" %>
+              </p>
+            </td>
+          </tr> 
+          <tr>
+            <th class="input_name">会員ランク</th>
+            <td colspan="2" class="bd">
+              <%= f.collection_select(:member_id, Member.all, :id, :name, {}, {class:"select-box", id:"member"}) %>
+            </td>
+          </tr>
+        </table>
+        <table class="entry_table1" >
+          <tr>
+            <th class="input_name">誕生日</th>
+              <td class="birth_table bd">
+                <%= raw sprintf(
+                  f.date_select(
+                    :birthday,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+              </td>
+          </tr>
+          <tr>
+            <th class="input_name">性別</th>
+            <td class="bd">
+              <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box1", id:"gender"}) %>
+            </td>
+          </tr>
+          <tr>
+            <th class="input_name">血液型</th>
+            <td class="bd">
+              <%= f.collection_select(:blood_type_id, BloodType.all, :id, :name, {}, {class:"select-box1", id:"blood_type"}) %>
+            </td>
+          </tr>
+          <tr>
+            <th class="input_name">職業</th>
+            <td class="bd">
+              <%= f.collection_select(:job_id, Job.all, :id, :name, {}, {class:"select-box", id:"job"}) %>
+            </td>
+          </tr>
+          <tr>
+            <th class="input_name">担当スタイリスト</th>
+            <td class="bd">
+              <%= f.collection_select(:stylist_id, Stylist.all, :id, :name, {}, {class:"select-box", id:"stylists"}) %>
+            </td>
+          </tr>
+          <tr>
+            <th class="input_name">お客様メモ</th>
+            <td class="bd">
+              <%= f.text_area :customer_text, class:"text_field" %>
+            </td>
+          </tr>
+          
+          <div class="submit_save">
+           <%# <p>
+             <%= f.submit "登録する"class:%>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

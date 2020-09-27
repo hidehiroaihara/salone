@@ -48,16 +48,39 @@
 .management{
  font-size: 18px;
  border: 1px solid skyblue;
- padding: 7px 17px;
+ padding: 7px;
  background-color: skyblue;
  color: white;
+ box-shadow:
+    0 1.9px 2.5px rgba(211, 211, 211, 0.057),
+    0 5px 6.1px rgba(211, 211, 211, 0.076),
+    0 10.1px 11.4px rgba(211, 211, 211, 0.086),
+    0 19.2px 19.8px rgba(211, 211, 211, 0.092),
+    0 38.4px 34.8px rgba(211, 211, 211, 0.1),
+    0 101px 74px rgba(211, 211, 211, 0.13);
+  border-radius: 3px;
 }
+.management:hover {
+    box-shadow: inset 1px 1px 10px 2px rgba(235, 235, 235, 0.5);
+}
+
 .user-management{
   font-size: 18px;
   padding: 7px;
   border: 1px solid skyblue;
   background-color: skyblue;
   color: white;
+  box-shadow:
+    0 1.9px 2.5px rgba(211, 211, 211, 0.057),
+    0 5px 6.1px rgba(211, 211, 211, 0.076),
+    0 10.1px 11.4px rgba(211, 211, 211, 0.086),
+    0 19.2px 19.8px rgba(211, 211, 211, 0.092),
+    0 38.4px 34.8px rgba(211, 211, 211, 0.1),
+    0 101px 74px rgba(211, 211, 211, 0.13);
+  border-radius: 3px;
+}
+.user-management:hover {
+  box-shadow: inset 1px 1px 10px 2px rgba(235, 235, 235, 0.5);
 }
 .btn-bottom{
   min-width: 980px;
@@ -77,19 +100,45 @@
   display: flex;
   width: 100%;
 }
-.schedule{
+.schedule ,.customer-list,.reservation-list{
+  display: block;
+  width: 120px;
+  height: 20px;
   border: 1px solid skyblue;
   padding: 5px 10px;
   background-color:skyblue;
   color: white;
   margin-right: 5px;
+  box-shadow:
+    0 1.9px 2.5px rgba(211, 211, 211, 0.057),
+    0 5px 6.1px rgba(211, 211, 211, 0.076),
+    0 10.1px 11.4px rgba(211, 211, 211, 0.086),
+    0 19.2px 19.8px rgba(211, 211, 211, 0.092),
+    0 38.4px 34.8px rgba(211, 211, 211, 0.1),
+    0 101px 74px rgba(211, 211, 211, 0.13);
+  border-radius: 3px;
+  text-align: center;
 }
-.reservation-list{
+.schedule:hover,.customer-list:hover{
+  box-shadow: inset 1px 1px 10px 2px rgba(235, 235, 235, 0.5);
+}
+/* .reservation-list{
   border: 1px solid skyblue;
   padding: 5px 25px;
   background-color: skyblue;
   color: white;
   margin-right: 5px;
+  box-shadow:
+    0 1.9px 2.5px rgba(211, 211, 211, 0.057),
+    0 5px 6.1px rgba(211, 211, 211, 0.076),
+    0 10.1px 11.4px rgba(211, 211, 211, 0.086),
+    0 19.2px 19.8px rgba(211, 211, 211, 0.092),
+    0 38.4px 34.8px rgba(211, 211, 211, 0.1),
+    0 101px 74px rgba(211, 211, 211, 0.13);
+  border-radius: 3px;
+} */
+.reservation-list:hover{
+  box-shadow: inset 1px 1px 10px 2px rgba(235, 235, 235, 0.5);
 }
 a{
   text-decoration: none;
