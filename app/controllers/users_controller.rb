@@ -10,6 +10,11 @@ class UsersController < ApplicationController
 
   def create
     @user = UserAddress.new(user_params)
+    if @user.save
+       return redirect_to user_path
+    else 
+       render :new
+    end
   end
   
   private
