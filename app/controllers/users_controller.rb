@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    
     @user = UserAddress.new(user_params)
     if @user.save
        return redirect_to user_path
