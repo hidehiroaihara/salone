@@ -1,8 +1,8 @@
 
 <%= render "shared/header" %>
 <div class="contents">
-　<div class="section">
-　　<div class="schedule_head">
+  <div class="section">
+    <div class="schedule_head">
       <p class="left-click" id="left-click"> 
        <%= link_to image_tag("left-direction.png", class:"click-icon"), "/" %>
       </p>
@@ -76,76 +76,8 @@
      </div>
      <div class="table03" id="table03">
       <thead class="table3">
-        <tr>
-          <%# スタイリストIDを持ってくる %>
-          <th class="table_stylist_top"> <% %></th>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-            <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-          <td class="table_stylist">
-           <p class="table_stylist1"></p><p class="table_stylist2"></p><p class="table_stylist3"></p>
-          </td>
-        </tr>
+      <%= render partial: 'reservations', collection: @stylists %>
+        
       </thead>
      </div>
   </table>

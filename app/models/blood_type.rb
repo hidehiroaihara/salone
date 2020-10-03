@@ -1,6 +1,5 @@
 class BloodType < ActiveHash::Base
   self.data = [
-    { id: 0, name: '--' },
     { id: 1, name: 'A型' },
     { id: 2, name: 'B型' },
     { id: 3, name: 'O型' },

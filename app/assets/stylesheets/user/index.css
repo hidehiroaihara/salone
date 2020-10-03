@@ -119,6 +119,10 @@ select{
   background-color: rgba(228, 218, 131, 0.89);
   border: 2px solid black;
 }
+.display_th{
+  border: black 2px solid;
+  text-align: center;
+}
 /* .sorttbl{
   border-collapse: collapse;
   border-spacing: 0;
