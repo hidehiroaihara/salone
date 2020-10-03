@@ -93,9 +93,7 @@ Things you may want to cover:
 | ------------------- | ------------ | ----------------------------- |
 | post_code           | string       | null: false                   |
 | prefecture_id       | integer      | null: false                   |
-| city                | string       | null: false                   |
-| house_number        | string       | null: false                   |
-| building            | string       |                               |
+| address_all         | string       | null: false                   |
 | user_id             | integer      | null: false, foreign_key: true|
 
 ### Association
@@ -137,15 +135,37 @@ Things you may want to cover:
 
 ## stylists テーブル
 
-|  Column             | Type         | Options                       |
-| ------------------- | ------------ | ----------------------------- |
-| stylist_name        | string       | null: false, foreign_key: true|
-
+|  Column                | Type         | Options                       |
+| ---------------------- | ------------ | ----------------------------- |
+| stylist_first_name     | string       | null: false                   |
+| stylist_lsat_name      | string       | null: false                   |
+| stylist_first_name_cana| string       | null: false                   |
+| stylist_last_name_can  | string       | null: false                   |
+| rank_id                | integer      | null: false                   |
+| gender_id              | integer      | null: false                   |
+| catchphrase            | string       | null: false                   |
+| self-introduction      | string       | null: false                   |
 
 ### Association
 
 - has_many :reservations
 - has_many :users
+- has-one :stylist_detail
+
+## stylist_details テーブル
+
+|  Column                | Type         | Options                       |
+| ---------------------- | ------------ | ----------------------------- |
+| rank_text              | string       | null: false                   |
+| stylist_history_id     | integer      | null: false                   |
+| nomination             | integer      | null: false                   |
+| nomination_price       | integer      | null: false                   |
+| style_type_id          | integer      | null: false                   |
+| style_technique        | text         | null: false                   |
+| hobby                  | text         | null: false                   |
+| stylist_id             | integer      | null: false, foreign_key: true|
+### Association
+- belongs_to :stylist
 
 ##  reservationsテーブル
 
