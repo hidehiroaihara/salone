@@ -123,6 +123,10 @@ select{
   border: black 2px solid;
   text-align: center;
 }
+.user_full_name{
+  color: rgb(30, 87, 209);
+}
+
 /* .sorttbl{
   border-collapse: collapse;
   border-spacing: 0;

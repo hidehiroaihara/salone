@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render "shared/header_stylist" %>
 <div class="contents">
   <div class="section">
     <div class="customer_title">
@@ -44,7 +44,7 @@
             </td>
             <td rowspan="2" class="stylist_info image-pad" style="height:70px">
               <%= link_to edit_stylist_path(stylist.id) do %>
-                <%= image_tag stylist.image.variant(resize:'80x200').processed, class: 'stylist-image' if stylist.image.attached? %>
+                <%= image_tag stylist.image.variant(resize:'80x200'), class: 'stylist-image' if stylist.image.attached? %>
               <% end %>
             </td>
             <td rowspan="1" class="stylist_info">

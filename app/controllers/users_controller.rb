@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :show, :destroy] 
   def index
     age_update
     @search_params = user_search_params
@@ -18,7 +19,31 @@ class UsersController < ApplicationController
        render :new
     end
   end
+
+  def show
+  end
+
+  def edit
+    @user_address = UserAddress.new(first_name: @user.first_name, last_name: @user.last_name, first_name_cana: @user.first_name_cana, last_name_cana: @user.last_name_cana, phone_number: @user.phone_number, email: @user.email, customer_number: @user.customer_number, post_code: @user.address.post_code, prefecture_id: @user.address.prefecture_id, address_all: @user.address.address_all, gender_id: @user.gender_id, blood_type_id: @user.blood_type_id, job_id: @user.job_id, customer_text: @user.customer_text, member_id: @user.member_id, information_text: @user.information.information_text, consent: @user.message.consent, stylist_id: @user.stylist.id, birthday: @user.birthday, information_date: @user.information.information_date)
+  end
+
+  def update
+    @user_address = UserAddress.new(user_params)
+    if @user_address.save_update(params[:id])
+       redirect_to users_path
+    else
+      render :edit 
+    end
+  end
   
+  def destroy
+    @user_address = UserAddress.new
+    if @user_address.user_destroy(params[:id])
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
   private
 
   def user_params
@@ -66,5 +91,9 @@ class UsersController < ApplicationController
 
   def set_information_date
     Date.new(params.require(:user_address).require("information_date(1i)").to_i,params.require(:user_address).require("information_date(2i)").to_i,params.require(:user_address).require("information_date(3i)").to_i)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end

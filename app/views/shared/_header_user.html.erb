@@ -21,17 +21,11 @@
     <div class="section-bottom">
       <div class="btn-column">
         <ul class="column-all">
-          <% if current_page?(root_path) %>
-            <li><%= link_to "スケジュール", "#", class:"schedule"%></li>
-            <li><%= link_to "予約一覧", "#", class:"reservation-list"%></li>
-          <% elsif current_page?(controller: "users", action: "index") || current_page?(controller: "users", action: "new") || current_page?(controller: "users", action: "edit") || current_page?(controller: "users", action: "show") %> 
+          <% if current_page?(controller: "users", action: "index") || current_page?(controller: "users", action: "new") || current_page?(controller: "users", action: "edit") || current_page?(controller: "users", action: "show") %> 
             <li><%= link_to "お客様一覧", users_path, class:"customer-list" %></li>
             <li><%= link_to "登録", new_user_path, class:"customer-list" %></li>
             <li><%= link_to "変更", "#", class:"customer-list" %></li>
             <li><%= link_to "削除", "#", class:"customer-list" %></li>
-          <% elsif current_page?(controller: "stylists", action: "index") || current_page?(controller: "stylists", action: "new") || current_page?(controller: "stylists", action: "edit") || current_page?(controller: "stylists", action: "show") %>
-            <li><%= link_to "スタイリスト一覧", stylists_path, class:"stylist_list1" %></li>
-            <li><%= link_to "スタイリスト登録", new_stylist_path, class:"stylist_list1"%></li>
           <% end %>
         </ul>
       </div>

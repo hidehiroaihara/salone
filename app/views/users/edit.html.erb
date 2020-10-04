@@ -9,7 +9,7 @@
       <h2 class="basic">基本情報</h2>
     </div>
     <div class="entry">
-      <%= form_with model: @user, url: users_path, local: true do |f| %>
+      <%= form_with model: @user_address, url: user_path(@user.id), local: true do |f| %>
         <table class="entry_table" align="left">
           <tr>
             <th class="input_name">氏名(漢字)</th>
@@ -159,7 +159,6 @@
               <%= f.label :consent, "メール配信設定しない", {value: :female, style: "display: inline-block;"} %>
               <%= f.radio_button :consent, :female %>
             </td>
-          </tr>
         </table>
         <div class="submit_save">
            <p class="registration_area">
