@@ -43,9 +43,7 @@
               <% %>
             </td>
             <td rowspan="2" class="stylist_info image-pad" style="height:70px">
-              <%= link_to edit_stylist_path(stylist.id) do %>
-                <%= image_tag stylist.image.variant(resize:'80x200'), class: 'stylist-image' if stylist.image.attached? %>
-              <% end %>
+                <%= image_tag stylist.image.variant(resize_to_limit: [100, 100]) ,id:"image", class: 'stylist-image' if stylist.image.attached? %>
             </td>
             <td rowspan="1" class="stylist_info">
               <%= link_to edit_stylist_path(stylist.id) do %>
@@ -59,7 +57,7 @@
               <%= stylist.stylist_detail.stylist_history.name %>
             </td>
             <td rowspan="2" class="stylist_info">
-              <%= link_to "詳細", edit_stylist_path(stylist.id), method: :get, class:"stylist_show" %>
+              <%= link_to "詳細", stylist_path(stylist.id), class:"stylist_show" %>
             </td>
             <td rowspan="2" >
               <%= link_to "削除", stylist_path(stylist.id), method: :delete, class:"stylist_delete" %>

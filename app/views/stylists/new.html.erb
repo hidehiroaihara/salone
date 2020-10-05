@@ -8,7 +8,7 @@
     <p class="item">
       🔴必要項目
     </p>
-    <%= form_with model: @stylist, url: stylists_path, local: true do |f| %>
+    <%= form_with model: @stylist, url: stylists_path, id: 'new_stylist', local: true do |f| %>
       <table class="stylist_new_table" align="left">
         <tr>
           <th class="stylist_title">スタイリスト情報
@@ -19,8 +19,12 @@
           <td class="stylist_image">
             <div class="image_area">
               <%# <%= image_tag @stylist.image, class: "item-img" %> 
-            <div>
-            <%= f.file_field :image, class:"image_style" %>
+            </div>
+            <label class="form-image">
+              <span class="image-file">アップロード</span>
+              <%= f.file_field :image, class:"image_style"  %>
+            </label>
+            <div id="image-list" class="image-size"></div>
           </td>
         </tr>
       </table>
@@ -71,7 +75,7 @@
       </table>
       <table class="stylist_new_table" align="left">
       </table>
-      <table class="stylist_new_table2" style="float:left;margin-left:45px;margin-top:30px;">
+      <table class="stylist_new_table2" style="float:left;margin-left: 45px;margin-top:30px;">
         <colgroup width="15%"></colgroup>
         <colgroup width="50%"></colgroup>
         <colgroup width="5%"></colgroup>
@@ -99,7 +103,7 @@
       </table>
       <table class="stylist_new_table" align="left">
       </table>
-      <table class="stylist_new_table2" style="float:left;margin-left:45px;margin-top:30px;">
+      <table class="stylist_new_table2" style="float:left;margin-left:45px;margin-top:30px;margin-bottom:30px;">
         <colgroup width="20%"></colgroup>
         <colgroup width="20%"></colgroup>
         <colgroup width="15%"></colgroup>
@@ -155,6 +159,28 @@
           </td>
           <td class="stylist_td1 size"><span id="count4">0</span>/100
           </td>
+        </tr>
+      </table>
+      <table class="stylist_new_table3">
+        <colgroup width="25%"></colgroup>
+        <colgroup width="15%"></colgroup>
+        <colgroup width="15%"></colgroup>
+        <colgroup width="15%"></colgroup>
+        <colgroup width="15%"></colgroup>
+        <colgroup width="15%"></colgroup>
+        <tr>
+          <th colspan="6" class="stylist_title">style picture
+            <p class="block_area"></p>
+          </th>
+        </tr>
+        <tr class="style_field">
+          <th class="style_field_img" colsapnn="6">
+            <label class="form-image">
+              <span class="image-file">アップロード</span>
+              <%= f.file_field :portraits, name: 'stylist_stylist_detail[portraits][]', id: 'stylist_portraits', class:"hidden" %>
+            </label>
+            <div id="image-url"></div>
+          </th>
         </tr>
       </table>
       <table style="width:100%;height:20px;margin-top:30px;">
