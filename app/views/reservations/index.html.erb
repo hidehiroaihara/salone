@@ -3,13 +3,13 @@
   <div class="section">
     <div class="schedule_head">
       <p class="left-click" id="left-click"> 
-       <%= link_to image_tag("left-direction.png", class:"click-icon"), "/" %>
+       <%= link_to image_tag("left-direction.png", class:"click-icon"), root_path(params:{ago:(@ago + 1)})%>
       </p>
       <p class="schedule-date" id="schedule-date">
-       <%= link_to "日にち （曜日）", "#", class:"schedule-today" %>
+       <%= link_to @time.strftime("%m/%d(#{@wd[@time.wday]})"), "#", class:"schedule-today" %>
       </p>
       <p class="right-click" id="right-click">
-       <%= link_to image_tag("right-direction.png", class:"click-icon"), "/" %>
+       <%= link_to image_tag("right-direction.png", class:"click-icon"),root_path(params:{ago:(@ago - 1)})%>
       </p>
       <div class="stylist-name" id="stylist-name">
         <%= form_with url:"#" do |f| %>

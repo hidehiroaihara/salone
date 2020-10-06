@@ -1,6 +1,7 @@
 .page-footer{
   background-color: lightskyblue;
   min-width: 980px;
+  margin-bottom: 60px;
 }
 .path{
   width: 100%;

@@ -60,7 +60,7 @@
               <%= link_to "詳細", stylist_path(stylist.id), class:"stylist_show" %>
             </td>
             <td rowspan="2" >
-              <%= link_to "削除", stylist_path(stylist.id), method: :delete, class:"stylist_delete" %>
+              <%= link_to "削除", stylist_path(stylist.id), method: :delete, id:"style_delete", class: "stylist_delete", data: { confirm: "本当に削除しますか？"} %>
             </td>
           </tr>
           <tr>

@@ -25,9 +25,9 @@ class StylistsController < ApplicationController
   end
 
   def update
-    binding.pry
     # @stylist.images.detach #一旦、すべてのimageの紐つけを解除
     @stylist_detail = StylistStylistDetail.new(stylist_params)
+    # binding.pry
     if @stylist_detail.save_update(params[:id])
       redirect_to stylists_path, notice: '更新完了しました'
     else
@@ -56,6 +56,11 @@ class StylistsController < ApplicationController
     params.require(:stylist_stylist_detail).permit(:stylist_first_name, :stylist_last_name, :stylist_first_name_cana, :stylist_last_name_cana, :rank_id, :gender_id, :catchphrase, :self_introduction, :stylist_number, :rank_text, :stylist_history_id, :nomination_id, :nomination_price, :style_technique, :hobby, :style_type_id,:image , portraits: [])
     # .merge(images: uploaded_images)
   end
+
+  # def stylist_params
+  #   params.require(:stylist_stylist_detail).permit(:stylist_first_name, :stylist_last_name, :stylist_first_name_cana, :stylist_last_name_cana, :rank_id, :gender_id, :catchphrase, :self_introduction, :stylist_number, :rank_text, :stylist_history_id, :nomination_id, :nomination_price, :style_technique, :hobby, :style_type_id,:image , portraits: [])
+    # .merge(images: uploaded_images)
+  # end
 
   # def edit_stylist_params
   #   params.require(:stylist_stylist_detail).permit(:stylist_first_name, :stylist_last_name, :stylist_first_name_cana, :stylist_last_name_cana, :rank_id, :gender_id, :catchphrase, :self_introduction, :stylist_number, :rank_text, :stylist_history_id, :nomination_id, :nomination_price, :style_technique, :hobby, :style_type_id, images: [])

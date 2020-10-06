@@ -147,7 +147,7 @@
       <p class="img_all_area">
         <% if @stylist.portraits.attached? %>
           <% @stylist.portraits.each do |portrait| %>
-            <%= image_tag portrait.variant(resize_to_limit: [100, 100]) %>
+            <%= image_tag portrait %>
           <% end %>
         <% end %>
       </p>
